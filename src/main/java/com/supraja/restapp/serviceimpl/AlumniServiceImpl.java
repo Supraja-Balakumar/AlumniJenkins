@@ -23,20 +23,18 @@ public class AlumniServiceImpl implements AlumniService {
 
 	@Override
 	public String addAlumni(Alumni alumni) {
-		if(alumni !=null) {
+		if (alumni != null) {
 			repo.save(alumni);
 			return "success";
-		}else {
+		} else {
 			return "Fail to add";
 		}
-		
+
 	}
-	
+
 	@Override
 	public Alumni getAlumni(int aid) {
-		Alumni alumni = repo.findById(aid);
-
-		return alumni;
+		return repo.findById(aid);
 
 	}
 
@@ -47,30 +45,26 @@ public class AlumniServiceImpl implements AlumniService {
 
 	@Override
 	public String updateAlumni(Alumni alumni) {
-        if(alumni!=null) {
-        	repo.save(alumni);
-    		return "updated";
-        }
-        else {
-        	return "Not updated";
-        }
+		if (alumni != null) {
+			repo.save(alumni);
+			return "updated";
+		} else {
+			return "Not updated";
+		}
 	}
 
-	
-	
 	@Override
 	public String deleteAlumni(int aid) {
-		Alumni alumni =repo.findById(aid);
-		if(alumni!=null) {
+		Alumni alumni = repo.findById(aid);
+		if (alumni != null) {
 			repo.deleteById(aid);
 			return "Deleted";
-		}else {
+		} else {
 			return "Failed to delete";
 		}
-		
+
 	}
 
-	
 	public List<Integer> getAllId() {
 		return repo.getIDList();
 	}

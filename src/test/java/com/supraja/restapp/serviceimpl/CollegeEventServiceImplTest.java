@@ -16,7 +16,7 @@ class CollegeEventServiceImplTest {
 	private CollegeEventServiceImpl collegeeventService;
 	
 	@Test
-	public void testAddCollegeEvent() {
+	void testAddCollegeEvent() {
 		Alumni alumni =new Alumni(0, "uygh", "iyg", "ojinoi", "iuyg");
 		CollegeEvent obj=new CollegeEvent(14,"Sam","4000",alumni);
 		assertEquals("success",collegeeventService.addCollegeEvent(obj));	
