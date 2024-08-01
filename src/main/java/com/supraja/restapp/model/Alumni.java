@@ -74,7 +74,6 @@ public class Alumni {
 
 	public Alumni() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 }

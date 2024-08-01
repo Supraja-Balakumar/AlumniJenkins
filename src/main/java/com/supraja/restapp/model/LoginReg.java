@@ -73,7 +73,6 @@ public class LoginReg {
 
 	public LoginReg() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 }

@@ -1,6 +1,6 @@
 package com.supraja.restapp.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,9 +12,14 @@ import com.supraja.restapp.service.LoginRegService;
 
 @RestController
 @RequestMapping("/user")
-@CrossOrigin("*")
+@CrossOrigin("http://localhost:3000/")
 public class LoginRegController {
-	@Autowired
+	
+	public LoginRegController(LoginRegService loginregService) {
+		super();
+		this.loginregService = loginregService;
+	}
+
 	LoginRegService loginregService;
 
 	@PostMapping("/register")

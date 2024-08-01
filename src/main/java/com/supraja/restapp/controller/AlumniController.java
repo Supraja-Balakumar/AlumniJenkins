@@ -17,7 +17,7 @@ import com.supraja.restapp.serviceimpl.AlumniServiceImpl;
 
 @RestController
 @RequestMapping("/alumni")
-@CrossOrigin("*")
+@CrossOrigin("http://localhost:3000/")
 public class AlumniController {
 
 	public AlumniController(AlumniServiceImpl service) {

@@ -1,6 +1,5 @@
 package com.supraja.restapp.serviceimpl;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.supraja.restapp.model.LoginReg;
@@ -9,7 +8,12 @@ import com.supraja.restapp.service.LoginRegService;
 
 @Service
 public class LoginRegServiceImpl implements LoginRegService {
-	@Autowired
+	
+	public LoginRegServiceImpl(LoginRegRepo loginregRepo) {
+		super();
+		this.loginregRepo = loginregRepo;
+	}
+
 	LoginRegRepo loginregRepo;
 
 	@Override

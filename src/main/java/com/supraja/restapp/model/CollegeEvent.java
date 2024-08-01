@@ -65,7 +65,6 @@ public class CollegeEvent {
 
 	public CollegeEvent() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 }

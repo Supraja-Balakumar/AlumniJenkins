@@ -16,7 +16,7 @@ import com.supraja.restapp.serviceimpl.CollegeEventServiceImpl;
 
 @RestController
 @RequestMapping("/event")
-@CrossOrigin("*")
+@CrossOrigin("http://localhost:3000/")
 public class CollegeEventController {
 
 	public CollegeEventController(CollegeEventServiceImpl service) {

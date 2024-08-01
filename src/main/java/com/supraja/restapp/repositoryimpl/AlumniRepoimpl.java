@@ -17,7 +17,6 @@ public class AlumniRepoimpl implements AlumniRepo {
 
 	EntityManager entityManager;
 
-	// constructor using fields
 	public AlumniRepoimpl(EntityManager entityManager) {
 		super();
 		this.entityManager = entityManager;
@@ -45,10 +44,7 @@ public class AlumniRepoimpl implements AlumniRepo {
 
 	@Override
 	public void deleteById(int aid) {
-//		String jpql = "delete from Alumni where aid=" + aid;
-//		entityManager.createQuery(jpql).executeUpdate();
-		
-		Alumni al=entityManager.find(Alumni.class, aid);
+		Alumni al = entityManager.find(Alumni.class, aid);
 		entityManager.remove(al);
 	}
 
