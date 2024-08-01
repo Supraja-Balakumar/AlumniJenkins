@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.supraja.restapp.model.Alumni;
 import com.supraja.restapp.model.CollegeEvent;
 import com.supraja.restapp.repository.CollegeEventRepo;
 import com.supraja.restapp.service.CollegeEventService;
@@ -32,8 +31,7 @@ public class CollegeEventServiceImpl implements CollegeEventService {
 
 	@Override
 	public CollegeEvent getCollegeEvent(int eid) {
-		CollegeEvent event = repo.findById(eid);
-		return event;
+		return repo.findById(eid);
 	}
 
 	@Override
@@ -53,8 +51,7 @@ public class CollegeEventServiceImpl implements CollegeEventService {
 
 	@Override
 	public String deleteCollegeEvent(int eid) {
-		CollegeEvent event = repo.findById(eid);
-			return repo.deleteById(eid);
+		return repo.deleteById(eid);
 
 	}
 }

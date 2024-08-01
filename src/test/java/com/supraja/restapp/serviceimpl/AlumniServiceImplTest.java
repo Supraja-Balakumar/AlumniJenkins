@@ -16,7 +16,7 @@ class AlumniServiceImplTest {
 	private AlumniServiceImpl alumniService;
 	
 	@Test
-	public void testAddAlumni() {
+	void testAddAlumni() {
 		Alumni obj=new Alumni(13,"Samaira","IT","2023","developer");
 		assertEquals("success",alumniService.addAlumni(obj));	
 	}
@@ -34,13 +34,13 @@ class AlumniServiceImplTest {
 //	}
 
 	@Test
-	public void testUpdateAlumni() {
+	void testUpdateAlumni() {
 		Alumni obj=null;
 		assertEquals("Not updated",alumniService.updateAlumni(obj));	
 	}
 
 	@Test
-	public void testgetAllAlumni() {
+	void testgetAllAlumni() {
 		
 		assertNotNull(alumniService.getAllAlumni());	
 	}
@@ -56,7 +56,7 @@ class AlumniServiceImplTest {
 	}
 	
 	@Test
-	public void testgetAlumni() {
+	void testgetAlumni() {
 		
 		assertNotNull(alumniService.getAlumni(8));	
 	}
